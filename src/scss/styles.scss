@@ -1,0 +1,54 @@
+@import "/src/scss/custom-theme-material";
+@import 'node_modules/@angular/material/theming';
+
+// Own styles for this project
+// Provide colors-palletes as importable names
+$primary: mat-color($BaumdienstNeuwied-primary);
+$accent: mat-color($BaumdienstNeuwied-accent, 500);
+$warn: mat-color($BaumdienstNeuwied-white);
+
+/* Global Color Vars */
+$color-background-light: #fff;
+$color-background-dark: #804e49;
+$color-accent-primary: #587022;
+$color-font-main: #121619;
+$color-font-inverted: #fff;
+$color-font-secondary: #8b8266;
+$color-font-action-button: #804E49;
+
+/* Corner Radius */
+$rounded-1: 4px;
+$rounded-2: 8px;
+$rounded-3: 25px;
+$rounded-4: 50px;
+$rounded-5: 100px;
+
+/* Font */
+$font-family: Poppins;
+$font-size-regular: 16px;
+$font-size-h4: 20px;
+$font-size-h3: 24px;
+$font-size-h2: 34px;
+$font-size-h1: 54px;
+
+$font-weight-regular: normal;
+$font-weight-bolder: bolder;
+$font-weight-bold: bold;
+$font-weight-lighter: 400;
+$font-weight-light: lighter;
+
+/* Media Query */
+$s-screen: "(min-width: 576px)";
+$m-screen: "(min-width: 768px)";
+$l-screen: "(min-width: 992px)";
+$xl-screen: "(min-width: 1200px)";
+
+h1 {
+  font-size: 54px;
+  line-height: normal;
+}
+
+* {
+    font-family: $font-family;
+    scroll-behavior: smooth;
+}

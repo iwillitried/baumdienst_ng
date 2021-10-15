@@ -1,0 +1,42 @@
+@import '/src/scss/styles';
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-background-dark;
+  padding-top: 140px;
+  .heading-container {
+    //background-image: linear-gradient(rgba(88, 112, 34, 0.3), rgba(88, 112, 34, 0.3)), url('../../../assets/background/tree.jpeg');
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: $color-background-dark;
+
+    h1 {
+      margin: 150px 0 0 0;
+      font-size: $font-size-large;
+    }
+    h2 {
+      margin: 20px 0 0 0;
+      font-size: $font-size-more-than-regular;
+    }
+    h1,h2 {
+      color: white;
+      z-index: 100;
+      text-align: center;
+    }
+  }
+  .content-container {
+    padding-top: 50px;
+    max-width: 900px;
+    text-align: left;
+
+    * {
+      color: $color-font-inverted;
+    }
+
+  }
+}

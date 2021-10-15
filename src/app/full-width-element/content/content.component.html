@@ -1,0 +1,6 @@
+<div [ngSwitch]="contentType">
+  <app-text-and-image *ngSwitchCase="type.text_and_image"></app-text-and-image>
+  <app-text-only *ngSwitchCase="type.text_only"></app-text-only>
+  <app-contact-form *ngSwitchCase="type.contact_form"></app-contact-form>
+  <app-image-and-button *ngSwitchCase="type.image_and_button"></app-image-and-button>
+</div>

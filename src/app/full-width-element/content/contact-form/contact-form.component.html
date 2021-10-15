@@ -1,0 +1,51 @@
+<div class="contact-form">
+  <div class="content-container">
+    <div class="form-header">
+      <h1>Kontakt</h1>
+      <p>Telefon: <a href="tel:02634940490">02634 940490</a></p>
+      <p>E-mail: <a href="mailto:info@baumdienst-neuwied.de">info@baumdienst-neuwied.de</a></p>
+      <p>Anschrift: Rengsdorfer Straße 43, 56581 Melsbach</p>
+      <p>Sparkasse Neuwied, IBAN: DE04 5745 0120 0030 5041 04</p>
+      <div class="contact-button-group">
+        <button mat-mini-fab><mat-icon>phone</mat-icon></button>
+        <button mat-mini-fab><mat-icon>facebook</mat-icon></button>
+        <button mat-mini-fab><mat-icon>email</mat-icon></button>
+      </div>
+    </div>
+    <div class="form-body">
+      <p>
+        <mat-form-field color="warn" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Gustav Gans">
+          <mat-hint>*Notwendig</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>E-Mail</mat-label>
+          <input matInput placeholder="gustav.gans@entenhausen.com">
+          <mat-hint>*Notwendig</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Telefonnummer</mat-label>
+          <input matInput placeholder="0235 12032">
+          <mat-hint></mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Nachricht</mat-label>
+          <textarea matInput placeholder="Guten Tag, ..."></textarea>
+        </mat-form-field>
+      </p>
+
+      <mat-checkbox class="" color="accent" >Ich bin damit einverstanden, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. <br>
+        Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.*<br></mat-checkbox>
+
+      <button mat-stroked-button color="warn">Anfrage senden</button>
+    </div>
+  </div>
+
+</div>

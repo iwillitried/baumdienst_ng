@@ -1,0 +1,73 @@
+@import '/src/scss/styles';
+
+.contact-form {
+  background-color: $accent;
+  min-height: 740px;
+  height: 100vh;
+  .content-container {
+    width: 950px;
+    margin: 0 auto;
+    padding-top: 50px;
+    .form-header {
+      p, a, h1, mat-icon {
+        color: $color-font-inverted;
+        margin-bottom: 5px;
+      }
+      h1 {
+        font-size: $font-size-large;
+        margin-bottom: 30px;
+      }
+      p, a {
+        font-size: $font-size-regular;
+      }
+      .contact-button-group {
+        margin: 0 10px 0 0;
+        display: flex;
+        button {
+          width: 30px;
+          height: 30px;
+          box-shadow: none;
+          background-color: $accent;
+          margin: 0px;
+
+          mat-icon {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .form-body {
+    margin-top: 30px;
+    display: block;
+    * {
+      width: 100%;
+    }
+
+    button {
+      margin: 10px 0;
+      border-color: $primary;
+      color: $primary;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 10px;
+      width: 100%;
+
+      mat-form-field {
+        width: 100%;
+        border-radius: $rounded-3;
+
+        label {
+          color: rgba($color: $color-font-inverted, $alpha: 0.6);
+        }
+      }
+
+
+    }
+  }
+
+
+}

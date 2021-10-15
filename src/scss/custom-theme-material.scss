@@ -1,0 +1,178 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import './node_modules/@angular/material/theming';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+/* Custom Material Theme */
+$md-leaf: (
+    50 : #ebeee4,
+    100 : #cdd4bd,
+    200 : #acb891,
+    300 : #8a9b64,
+    400 : #718543,
+    500 : #587022,
+    600 : #50681e,
+    700 : #475d19,
+    800 : #3d5314,
+    900 : #2d410c,
+    A100 : #c7ff7a,
+    A200 : #b1ff47,
+    A400 : #9cff14,
+    A700 : #90f900,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-sand: (
+    50 : #fdfbf6,
+    100 : #faf6e8,
+    200 : #f7f0d9,
+    300 : #f3eaca,
+    400 : #f1e6be,
+    500 : #eee1b3,
+    600 : #ecddac,
+    700 : #e9d9a3,
+    800 : #e7d59a,
+    900 : #e2cd8b,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #fffcf4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-tree: (
+    50 : #f0eae9,
+    100 : #d9cac8,
+    200 : #c0a7a4,
+    300 : #a68380,
+    400 : #936964,
+    500 : #804e49,
+    600 : #784742,
+    700 : #6d3d39,
+    800 : #633531,
+    900 : #502521,
+    A100 : #ff9b94,
+    A200 : #ff6c61,
+    A400 : #ff3c2e,
+    A700 : #ff2414,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$BaumdienstNeuwied-primary: mat-palette($md-sand);
+$BaumdienstNeuwied-accent: mat-palette($md-leaf, 500);
+
+// The warn palette is optional (defaults to red).
+$BaumdienstNeuwied-white: mat-palette($md-sand, A100);
+
+
+// define and set font family
+/*$app-font-family: define-typography-config(
+    $font-family: $font-family,
+);*/
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$BaumdienstNeuwied-theme: mat-light-theme((
+  color: (
+    primary: $BaumdienstNeuwied-primary,
+    accent: $BaumdienstNeuwied-accent,
+    warn: $BaumdienstNeuwied-white,
+  ),
+  //typography: $app-font-family
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($BaumdienstNeuwied-theme);
+
+$color-font-inverted: #fafafa;
+$accent: #587022;
+
+html, body { height: 100%; }
+* {
+    margin: 0;
+    font-family: Poppins, "Poppins", sans-serif !important;
+}
+.material-icons {
+    font-family: 'Material Icons' !important;
+}
+
+// Custom form field modifications
+.mat-form-field-label {
+    color: rgba($color: $color-font-inverted, $alpha: 0.4);
+}
+.mat-form-field-outline {
+    color: rgba($color: $color-font-inverted, $alpha: 1) !important;
+    opacity: 0.4;
+}
+.mat-checkbox-frame {
+    border-color: $color-font-inverted;
+}
+.mat-checkbox-label {
+    color: $color-font-inverted;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $color-font-inverted;
+}
+.mat-checkbox-checkmark-path {
+    stroke: $accent !important;
+}
+.mat-checkbox .mat-ripple-element {
+    background-color: $color-font-inverted;
+}
