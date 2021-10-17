@@ -1,24 +1,38 @@
-<!--<div class="image-and-button">
-  <img [src]="imageUrl" alt="background image">
-  <div class="centered-container">
-    <div class="content-container">
-      <div><h3>Kostenlose Besichtigung und Beratung vor Ort</h3></div>
-      <div><h3>02634 940490</h3></div>
-      <div><button mat-raised-button>Termin Vereinbaren</button></div>
+<!-- <div class="image-and-button">
+  <div class="parallax">
+    <div class="parallax__layer--back">
+      <img [src]="imageUrl" alt="background image">
+    </div>
+
+    <div class="parallax__layer--base">
+      <div class="text-wrapper ">
+        <h1>Baumpflege & Fällung</h1>
+        <h4>Kostenlose Besichtigung und Beratung vor Ort
+          <br>Tel.: 02634 940490
+        </h4>
+        <button class="bigShadow" mat-button>Termin vereinbaren</button>
+      </div>
     </div>
   </div>
+
+
+
+
+
 </div>
 -->
-<div class="image-and-button">
-  <img [src]="imageUrl" alt="background image">
-  <div class="text-wrapper">
-    <h1>Baumpflege & Fällung</h1>
-    <h4>Kostenlose Besichtigung und Beratung vor Ort
-      <br>Tel.: 02634 940490
-    </h4>
-    <button mat-button>Termin vereinbaren</button>
+
+<div #parallax class="parallax">
+  <div class="layer layer-back">
+    <div class="content-back">
+      <img [src]="imageUrl" alt="background image">
+    </div>
   </div>
-
-
-
+  <div class="layer layer-base">
+    <div class="content-base">BASE</div>
+    <h1>Hallöööchen</h1>
+  </div>
+  <div #trigger></div>
 </div>
+<div #goal ></div>
+

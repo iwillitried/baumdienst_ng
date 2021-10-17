@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullWidthElementModule } from './full-width-element/full-width-element.module';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
