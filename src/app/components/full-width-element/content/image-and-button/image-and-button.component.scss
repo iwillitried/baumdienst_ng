@@ -1,0 +1,151 @@
+@import "/src/scss/styles";
+/*
+@media #{$s-screen} {
+  img {
+    //max-height: 2500px !important;
+  }
+
+  h1 {
+    width: inherit !important;
+
+  }
+}
+
+.image-and-button {
+  height: 100vh;
+  position: relative;
+  color: $color-font-inverted;
+
+
+
+  .text-wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      width: 380px;
+
+    }
+
+    button {
+      width: 230px;
+      height: 65px;
+      color: $color-font-action-button;
+      background-color: $color-background-light;
+      font-size: $font-size-h4;
+    }
+
+
+
+  }
+}
+*/
+//
+//img {
+//  /*
+//  position: absolute;
+//  width: 100%;
+//  height: 100vh;
+//  max-width: 2000px;
+//  //max-height: calc(100vh - 80px);
+//  bottom: 600px;
+//  //right: 50%;
+//  //transform: translateX(50%);*/
+//  position: absolute;
+//  //width: 2000px;
+//  /* height: 100vh; */
+//  //max-width: 2000px;
+//  bottom: 0px;
+//  width: 100%;
+//  height: 100%;
+//  //margin: 0 auto;
+
+//}
+
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100vh 0;
+}
+
+.layer-base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) translateY(-50vh);
+
+}
+
+.layer-back {
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px) translateY(-25vh);
+  //top: -150px;
+}
+
+
+.content-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.content-base {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 30%;
+  height: 100vh;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $color-font-inverted;
+  line-height: normal;
+
+  h1 {
+    width: 380px;
+    line-height: normal;
+
+  }
+
+  button {
+    width: 230px;
+    height: 65px;
+    color: $color-font-action-button;
+    background-color: $color-background-light;
+    font-size: $font-size-h4;
+  }
+}
+
+img {
+  width: 100vw;
+  height: auto
+}

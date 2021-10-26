@@ -1,0 +1,43 @@
+<div class="component-wrapper" (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')">
+  <div class="banner">
+    <h1>Kontakt</h1>
+    <h4>Erzählen Sie von Ihrem Anliegen.<br>
+      Wir nehmen gerne den Kontakt auf</h4>
+  </div>
+
+  <div class="form-container flex-container">
+    <mat-form-field appearance="fill" color="primary" class="form-field-regular">
+      <mat-label>E-Mail</mat-label>
+      <input matInput placeholder="peter.pan@gmail.com">
+      <mat-icon matSuffix>mail_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="primary" class="form-field-regular">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Peter Pan">
+      <mat-icon matSuffix>person_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="primary" class="form-field-regular">
+      <mat-label>Telefonnummer</mat-label>
+      <input matInput placeholder="01234 567 8901">
+      <mat-icon matSuffix>phone_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label class="form-field-large">Nachricht</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <button mat-button class="form-field-regular">Anfrage senden</button>
+  </div>
+
+  <div class="contactInfo-container">
+    <p>02634 940490</p>
+    <p>info@baumdienst-neuwied.de</p>
+    <p>Rengsdorfer Straße 43, 56581 Melsbach</p>
+    <p>Sparkasse Neuwied</p>
+    <p>DE04 5745 0120 0030 5041 04</p>
+    <div class="social-buttons-container">
+      <mat-icon>camera</mat-icon>
+      <mat-icon>camera</mat-icon>
+      <mat-icon>camera</mat-icon>
+    </div>
+  </div>
+</div>

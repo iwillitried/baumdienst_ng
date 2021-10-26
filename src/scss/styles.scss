@@ -1,5 +1,5 @@
 @import "/src/scss/custom-theme-material";
-@import 'node_modules/@angular/material/theming';
+@import "node_modules/@angular/material/theming";
 
 // Own styles for this project
 // Provide colors-palletes as importable names
@@ -9,13 +9,16 @@ $warn: mat-color($BaumdienstNeuwied-white);
 
 /* Global Color Vars */
 $color-background-light: #fff;
+$color-background-accent: #eee1b3;
 $color-background-dark: #804e49;
+$color-background-form: #587022;
 $color-accent-primary: #587022;
 $color-font-main: #121619;
 $color-font-inverted: #fff;
 $color-font-secondary: #8b8266;
 $color-font-action-button: #804E49;
 $color-font-offwhite: #E5E5E5;
+
 
 /* Corner Radius */
 $rounded-1: 4px;
@@ -52,6 +55,10 @@ $xl-screen: "(min-width: 1200px)";
 
 /* Max content width */
 $max-content-wrapper-width: 1200px;
+
+body{
+  overflow: hidden;
+}
 
 h1 { font-size: $font-size-h1; }
 h1.extraLarge { font-size: $font-size-extraLarge, le }

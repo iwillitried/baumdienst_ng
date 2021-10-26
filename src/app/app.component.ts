@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import {ContentType} from './full-width-element/enums/contentType.enum';
+import { Component } from "@angular/core";
+import {ContentType} from "./components/full-width-element/enums/contentType.enum";
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
 
-  title = 'BaumdienstNeuwied';
+  title = "BaumdienstNeuwied";
 }

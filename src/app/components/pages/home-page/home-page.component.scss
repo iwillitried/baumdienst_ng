@@ -1,0 +1,21 @@
+:host {
+  overflow: auto;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  margin: auto;
+
+  app-content, div, p  {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    width: 100vw;
+    margin: auto;
+  }
+
+}
+

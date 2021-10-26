@@ -1,0 +1,28 @@
+<div class="component-wrapper">
+  <div class="banner">
+    <h1>Leistungen</h1>
+    <h4>
+      Baumfällung, Pflegeschnitt, Baumbegutachtung und Wiederherstellung der Verkehrssicherheit.
+      Wir führen alle Arbeiten rund um den Baum aus,
+      ob im Garten Ihres Eigenheims oder in der öffentlichen Parkanlage.
+    </h4>
+  </div>
+
+  <section>
+    <ul class="container left-container">
+      <li *ngFor="let p of paragraphs.left; let i = index">
+        <h2>{{romanNumbers[i]}}. {{p.title}}</h2>
+        <p>{{p.content}}</p>
+        <button mat-button> <mat-icon>arrow_right_alt</mat-icon>Mehr Erfahren</button>
+      </li>
+    </ul>
+
+    <ul class="container right-container">
+      <li *ngFor="let p of paragraphs.right; let i = index">
+        <h3>{{romanNumbers[i+paragraphs.left.length]}}. {{p.title}}</h3>
+        <p>{{p.content}}</p>
+        <button mat-button> <mat-icon>arrow_right_alt</mat-icon>Mehr Erfahren</button>
+      </li>
+    </ul>
+  </section>
+</div>

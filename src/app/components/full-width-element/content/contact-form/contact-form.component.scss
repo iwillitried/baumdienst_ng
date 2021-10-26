@@ -1,0 +1,54 @@
+@import "/src/scss/styles";
+
+.component-wrapper {
+  background-color: $color-background-form;
+}
+.banner {
+  position: sticky;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  color: $color-font-inverted;
+
+  * {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    line-height: 27px;
+    font-size: 20px;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+  }
+}
+
+.form-container {
+  max-width: 550px;
+  background-color: $color-background-form;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //gap: 25px;
+  margin: 0 auto;
+
+  .form-field-regular {
+    height: 75px;
+  }
+  .form-field-large {
+    height: 150px;
+
+  }
+}
+
+.contactInfo-container {
+  color: $color-font-inverted;
+  margin-left: 110px;
+  font-size: $font-size-h4;
+  font-weight: $font-weight-regular;
+}
