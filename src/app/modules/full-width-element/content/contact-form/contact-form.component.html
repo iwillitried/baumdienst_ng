@@ -1,0 +1,43 @@
+<div class="component-wrapper" (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')">
+  <div class="banner">
+    <h1>Kontakt</h1>
+    <h4>Erzählen Sie von Ihrem Anliegen.<br>
+      Wir nehmen gerne den Kontakt auf.</h4>
+  </div>
+
+  <div class="form-container flex-container">
+    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
+      <mat-label color="warn">E-Mail</mat-label>
+      <input matInput placeholder="peter.pan@gmail.com" color="warn">
+      <mat-icon matSuffix color="warn">mail_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
+      <mat-label color="warn">Name</mat-label>
+      <input matInput placeholder="Peter Pan" color="warn">
+      <mat-icon matSuffix color="warn">person_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
+      <mat-label color="warn">Telefonnummer</mat-label>
+      <input matInput placeholder="01234 567 8901" color="warn">
+      <mat-icon matSuffix color="warn">phone_outline</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="warn">
+      <mat-label color="warn">Nachricht</mat-label>
+      <textarea class="form-field-large" matInput color="warn"></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="warn">Anfrage senden</button>
+
+  </div>
+
+  <div class="contactInfo-container">
+    <p>Telefon: <mark>02634 940490</mark></p>
+    <p>Mail: <mark>info@baumdienst-neuwied.de</mark></p>
+    <p>Adresse: <mark>Rengsdorfer Straße 43, 56581 Melsbach</mark></p>
+    <p>Bank: <mark>Sparkasse Neuwied<br>DE04 5745 0120 0030 5041 04</mark></p>
+    <div class="social-buttons-container">
+      <mat-icon>sailing</mat-icon>
+      <mat-icon>transgender</mat-icon>
+      <mat-icon>piano</mat-icon>
+    </div>
+  </div>
+</div>

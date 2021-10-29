@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {ContentType} from "../../full-width-element/enums/contentType.enum";
+import {ContentType} from "../../../modules/full-width-element/enums/contentType.enum";
 
 @Component({
   selector: "app-home-page",

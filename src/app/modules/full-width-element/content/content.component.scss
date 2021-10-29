@@ -1,0 +1,6 @@
+@import "/src/scss/styles";
+
+div * {
+  background-color: rgba($color-background-light, 1);
+  z-index: -1;
+}

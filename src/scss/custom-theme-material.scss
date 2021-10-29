@@ -127,6 +127,7 @@ $BaumdienstNeuwied-white: mat-palette($md-sand, A100);
 );*/
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
+/*
 $BaumdienstNeuwied-theme: mat-light-theme((
   color: (
     primary: $BaumdienstNeuwied-primary,
@@ -134,7 +135,13 @@ $BaumdienstNeuwied-theme: mat-light-theme((
     warn: $BaumdienstNeuwied-white,
   ),
   //typography: $app-font-family
-));
+));*/
+
+$BaumdienstNeuwied-theme: mat-dark-theme(
+    $BaumdienstNeuwied-primary,
+    $BaumdienstNeuwied-accent,
+    $BaumdienstNeuwied-white
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

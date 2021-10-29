@@ -37,6 +37,7 @@ $font-size-h2: 34px;
 $font-size-h1: 54px;
 $font-size-extraLarge: 64px;
 
+$letter-spacing-5: 0.05em;
 $letter-spacing-10: 0.1em;
 $letter-spacing-16: 0.16em;
 
@@ -57,7 +58,6 @@ $xl-screen: "(min-width: 1200px)";
 $max-content-wrapper-width: 1200px;
 
 body{
-  overflow: hidden;
 }
 
 h1 { font-size: $font-size-h1; }

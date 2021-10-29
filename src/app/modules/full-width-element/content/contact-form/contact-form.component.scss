@@ -34,15 +34,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //gap: 25px;
   margin: 0 auto;
+  margin-bottom: 100px;
 
   .form-field-regular {
     height: 75px;
   }
   .form-field-large {
     height: 150px;
+  }
 
+  button {
+    color: $color-accent-primary;
+    height: 70px;
   }
 }
 
@@ -50,5 +54,24 @@
   color: $color-font-inverted;
   margin-left: 110px;
   font-size: $font-size-h4;
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight-light;
+  letter-spacing: $letter-spacing-5;
+  padding-bottom: 100px;
+
+  p {
+    color: rgba($color-font-inverted, 0.5);
+    mark {
+      color: $color-font-inverted;
+      background-color: transparent;
+    }
+  }
+
+  .social-buttons-container {
+    mat-icon {
+      font-size: $font-size-h2;
+      margin: 10px;;
+    }
+
+  }
+
 }

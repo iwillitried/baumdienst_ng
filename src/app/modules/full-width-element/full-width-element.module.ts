@@ -13,6 +13,7 @@ import { ImageAndButtonComponent } from "./content/image-and-button/image-and-bu
 import { TextAndImageComponent } from "./content/text-and-image/text-and-image.component";
 import { TextOnlyComponent } from "./content/text-only/text-only.component";
 import { ContactFormComponent } from "./content/contact-form/contact-form.component";
+import {DirectivesModule} from '../directives/directives.module';
 
 
 
@@ -27,15 +28,17 @@ import { ContactFormComponent } from "./content/contact-form/contact-form.compon
     TextOnlyComponent,
     ContactFormComponent,
   ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatTooltipModule
-  ],
+    imports: [
+        CommonModule,
+        DirectivesModule,
+        MatButtonModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        MatTooltipModule,
+
+    ],
   exports: [
     HeaderComponent,
     FooterComponent,
