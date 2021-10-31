@@ -1,56 +1,12 @@
-<!--
-<div class="image-and-button">
-  <div class="parallax">
-    <div class="parallax__layer--back">
-      <img [src]="imageUrl" alt="background image">
-    </div>
-
-    <div class="parallax__layer--base">
-      <div class="text-wrapper ">
-        <h1>Baumpflege & Fällung</h1>
-        <h4>Kostenlose Besichtigung und Beratung vor Ort
-          <br>Tel.: 02634 940490
-        </h4>
-        <button class="bigShadow" mat-button>Termin vereinbaren</button>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-</div>
--->
-
-<!--<div #parallax class="parallax">-->
-<!--  <div class="layer layer-back">-->
-<!--    <div class="content-back">-->
-<!--      <img [src]="imageUrl" alt="background image">-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="layer layer-base">-->
-<!--    <div class="text-wrapper">-->
-<!--      <h1>Baumpflege & Fällung</h1>-->
-<!--      <h4>Kostenlose Besichtigung und Beratung vor Ort-->
-<!--        <br>Tel.: 02634 940490-->
-<!--      </h4>-->
-<!--      <button class="bigShadow" mat-button>Termin vereinbaren</button>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div class="component-wrapper">
   <div appParallax [ratio]="0.7">
-    <img [src]="imageUrl" alt="background image" appParallax [spin]="0.05">
+    <img [src]="imageUrl" alt="background image" appParallax>
   </div>
-  <div>
-    <div class="text-wrapper">
-      <h1>Baumpflege & Fällung</h1>
-      <h4>Kostenlose Besichtigung und Beratung vor Ort
-        <br>Tel.: 02634 940490
-      </h4>
-      <button class="bigShadow" mat-button>Termin vereinbaren</button>
-    </div>
+  <div class="text-wrapper">
+    <h1>Baumpflege & Fällung</h1>
+    <h4>Kostenlose Besichtigung und Beratung vor Ort
+      <br>Tel.: 02634 940490
+    </h4>
+    <button class="bigShadow" (click)="scrollToContact()" mat-button>Termin vereinbaren</button>
   </div>
 </div>

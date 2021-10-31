@@ -6,7 +6,7 @@ import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} f
   styleUrls: ["./image-and-button.component.scss"]
 })
 export class ImageAndButtonComponent implements OnInit, AfterViewInit {
-  public imageUrl: string = "./assets/background/wood-slice.jpg";
+  public imageUrl: string = "./assets/background/transparent_wood-slice.jpg";
   @ViewChild("parallax") parralax!: ElementRef;
   // @ViewChild("trigger") public trigger!: HTMLElement;
   // @ViewChild("goal") public goal!: HTMLElement;
@@ -59,5 +59,9 @@ export class ImageAndButtonComponent implements OnInit, AfterViewInit {
     //
     // const myObserver = new IntersectionObserver(callback, {})
     // myObserver.observe(this.trigger);
+  }
+
+  scrollToContact(): void {
+    document.querySelector("#contact_form")?.scrollIntoView();
   }
 }

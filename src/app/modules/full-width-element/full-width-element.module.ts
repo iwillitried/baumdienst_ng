@@ -45,4 +45,6 @@ import {DirectivesModule} from '../directives/directives.module';
     ContentComponent
   ]
 })
-export class FullWidthElementModule { }
+export class FullWidthElementModule {
+
+}

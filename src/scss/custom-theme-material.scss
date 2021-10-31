@@ -151,7 +151,12 @@ $BaumdienstNeuwied-theme: mat-dark-theme(
 $color-font-inverted: #fafafa;
 $accent: #587022;
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
 * {
     margin: 0;
     font-family: Poppins, "Poppins", sans-serif !important;

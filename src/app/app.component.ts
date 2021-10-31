@@ -1,6 +1,4 @@
-import { Component } from "@angular/core";
-import {ContentType} from "./modules/full-width-element/enums/contentType.enum";
-
+import {Component} from '@angular/core';
 
 @Component({
   selector: "app-root",
@@ -8,6 +6,6 @@ import {ContentType} from "./modules/full-width-element/enums/contentType.enum";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+  title = "Baumdienst Neuwied";
 
-  title = "BaumdienstNeuwied";
 }

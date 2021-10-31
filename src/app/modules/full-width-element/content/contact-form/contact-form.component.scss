@@ -4,7 +4,6 @@
   background-color: $color-background-form;
 }
 .banner {
-  position: sticky;
   padding-top: 90px;
   padding-bottom: 50px;
   display: flex;
@@ -15,7 +14,6 @@
   color: $color-font-inverted;
 
   * {
-    max-width: 800px;
     text-align: center;
     margin-bottom: 24px;
   }
@@ -25,17 +23,18 @@
     font-size: 20px;
     letter-spacing: 0.025em;
     font-weight: 300;
+    display: none;
   }
 }
 
 .form-container {
-  max-width: 550px;
   background-color: $color-background-form;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 100px;
+  width: 90vw;
 
   .form-field-regular {
     height: 75px;
@@ -52,7 +51,6 @@
 
 .contactInfo-container {
   color: $color-font-inverted;
-  margin-left: 110px;
   font-size: $font-size-h4;
   font-weight: $font-weight-light;
   letter-spacing: $letter-spacing-5;
@@ -67,11 +65,37 @@
   }
 
   .social-buttons-container {
-    mat-icon {
-      font-size: $font-size-h2;
-      margin: 10px;;
+    a {
+      width: 48px;
+      height: 48px;
+      margin: 10px;
+      display: inline-block;
+
+      &.facebook-icon {
+        margin-left: 0;
+        background-image: url("/assets/icons/facebook.svg");
+      }
+      &.instagram-icon {
+        background-image: url("/assets/icons/instagram.svg");
+      }
+      &.mail-icon {
+        background-image: url("/assets/icons/email.svg");
+      }
     }
+
 
   }
 
 }
+
+@media #{$s-screen} {
+  .contactInfo-container {
+    margin-left: 110px;
+  }
+
+  .form-container {
+    max-width: 550px;
+  }
+}
+
+
