@@ -32,11 +32,14 @@
     button {
       pointer-events: all;
       height: 40px;
-      backdrop-filter: blur(10px);
-
     }
   }
 }
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
 @media #{$s-screen} {
   .content-container {
     position: fixed;
@@ -45,10 +48,13 @@
     z-index: 1;
     flex-direction: row;
     justify-content: space-between;
-    backdrop-filter: none;
 
     img {
-      margin: 15px 40px 0 0;
+      --padding: 10px;
+      margin: calc(20px - var(--padding)) calc(32px - var(--padding)) 0 0;
+      padding: var(--padding);
+      background-color: #ffffff01;
+      border-radius: $rounded-1;
       align-self: flex-start;
     }
 

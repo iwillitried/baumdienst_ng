@@ -1,4 +1,6 @@
 <div class="component-wrapper">
+  <app-content-header>
+  </app-content-header>
   <div class="banner">
     <h1>Leistungen</h1>
     <h4>
@@ -13,15 +15,21 @@
       <li *ngFor="let p of paragraphs.left; let i = index">
         <h2>{{romanNumbers[i]}}. {{p.title}}</h2>
         <p>{{p.content}}</p>
-        <button mat-button> <mat-icon>arrow_right_alt</mat-icon>Mehr Erfahren</button>
+        <button (click)="goToPage(i)" mat-button>
+          <mat-icon>arrow_right_alt</mat-icon>
+          Mehr Erfahren
+        </button>
       </li>
     </ul>
 
     <ul class="container right-container">
       <li *ngFor="let p of paragraphs.right; let i = index">
-        <h3>{{romanNumbers[i+paragraphs.left.length]}}. {{p.title}}</h3>
+        <h3>{{romanNumbers[i + paragraphs.left.length]}}. {{p.title}}</h3>
         <p>{{p.content}}</p>
-        <button mat-button> <mat-icon>arrow_right_alt</mat-icon>Mehr Erfahren</button>
+        <button (click)="goToPage(i+paragraphs.left.length)" mat-button>
+          <mat-icon>arrow_right_alt</mat-icon>
+          Mehr Erfahren
+        </button>
       </li>
     </ul>
   </section>

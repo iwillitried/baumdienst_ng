@@ -45,6 +45,14 @@ section {
     justify-content: space-between;
     gap: 90px;
     padding-bottom: 90px;
+
+    li {
+      max-width: 500px;
+
+      button {
+        text-align: left;
+      }
+    }
   }
 
 
@@ -90,6 +98,12 @@ section {
     .container {
       width: 50vw !important;
       padding: 0 30px;
+    }
+
+    .right-container li {
+      display: flex;
+      align-self: flex-end;
+      flex-direction: column;
     }
 
     h2 {

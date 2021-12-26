@@ -47,6 +47,10 @@
     color: $color-accent-primary;
     height: 70px;
   }
+
+  .mat-form-field.mat-warn .mat-input-element {
+    color: $color-font-inverted !important;
+  }
 }
 
 .contactInfo-container {

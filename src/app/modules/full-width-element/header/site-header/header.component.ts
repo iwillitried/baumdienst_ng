@@ -1,16 +1,16 @@
-import {Component, HostListener, OnInit, ViewChild} from "@angular/core";
-import {MessageService} from "../../../services/Message/message.service";
-import {Broadcast} from '../../../enums/Broadcast.enum';
+import {Component, OnInit} from '@angular/core';
+import {MessageService} from '../../../../services/Message/message.service';
+import {Broadcast} from '../../../../enums/Broadcast.enum';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  coloredLogoURL = "./assets/logo/Logo _Colored.svg";
-  whiteLogoURL = "./assets/logo/Logo_white.svg";
+  coloredLogoURL = './assets/logo/Logo _Colored.svg';
+  whiteLogoURL = './assets/logo/Logo_white.svg';
   public logoUrl: string;
   isFixed = false;
   subs: Subscription;
@@ -37,4 +37,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  goToContact(): void {
+    window.location.hash = 'contact_form';
+  }
 }
