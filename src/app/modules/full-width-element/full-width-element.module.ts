@@ -15,7 +15,8 @@ import {TextOnlyComponent} from './content/text-only/text-only.component';
 import {ContactFormComponent} from './content/contact-form/contact-form.component';
 import {DirectivesModule} from '../directives/directives.module';
 import {RouterModule} from '@angular/router';
-import { ContentHeaderComponent } from './header/content-header/content-header/content-header.component';
+import {ContentHeaderComponent} from './header/content-header/content-header/content-header.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -39,12 +40,14 @@ import { ContentHeaderComponent } from './header/content-header/content-header/c
     MatCheckboxModule,
     MatTooltipModule,
     RouterModule,
+    TranslateModule,
 
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    ContentHeaderComponent
   ]
 })
 export class FullWidthElementModule {

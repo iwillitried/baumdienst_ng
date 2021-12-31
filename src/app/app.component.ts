@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Baumdienst Neuwied';
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('de');
   }
 }
 

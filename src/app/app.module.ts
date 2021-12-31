@@ -13,6 +13,9 @@ import {TopicPageComponent} from './components/pages/topic-page/topic-page.compo
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
     FullWidthElementModule,
     DirectivesModule,
@@ -35,7 +39,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   exports: [],

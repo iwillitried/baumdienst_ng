@@ -1,4 +1,5 @@
 // Custom Theming for Angular Material
+@use '~@angular/material' as mat;
 // For more information: https://material.angular.io/guide/theming
 @import "./node_modules/@angular/material/theming";
 
@@ -9,7 +10,7 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 
 /* Custom Material Theme */
 $md-leaf: (
@@ -114,11 +115,11 @@ $md-tree: (
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$BaumdienstNeuwied-primary: mat-palette($md-sand);
-$BaumdienstNeuwied-accent: mat-palette($md-leaf, 500);
+$BaumdienstNeuwied-primary: mat.define-palette($md-sand);
+$BaumdienstNeuwied-accent: mat.define-palette($md-leaf, 500);
 
 // The warn palette is optional (defaults to red).
-$BaumdienstNeuwied-white: mat-palette($md-sand, A100);
+$BaumdienstNeuwied-white: mat.define-palette($md-sand, A100);
 
 
 // define and set font family
@@ -137,7 +138,7 @@ $BaumdienstNeuwied-theme: mat-light-theme((
   //typography: $app-font-family
 ));*/
 
-$BaumdienstNeuwied-theme: mat-dark-theme(
+$BaumdienstNeuwied-theme: mat.define-dark-theme(
     $BaumdienstNeuwied-primary,
     $BaumdienstNeuwied-accent,
     $BaumdienstNeuwied-white
@@ -146,7 +147,7 @@ $BaumdienstNeuwied-theme: mat-dark-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($BaumdienstNeuwied-theme);
+@include mat.all-component-themes($BaumdienstNeuwied-theme);
 
 $color-font-inverted: #fafafa;
 $accent: #587022;

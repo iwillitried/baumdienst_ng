@@ -1,11 +1,12 @@
+@use '~@angular/material' as mat;
 @import "/src/scss/custom-theme-material";
 @import "node_modules/@angular/material/theming";
 
 // Own styles for this project
 // Provide colors-palletes as importable names
-$primary: mat-color($BaumdienstNeuwied-primary);
-$accent: mat-color($BaumdienstNeuwied-accent, 500);
-$warn: mat-color($BaumdienstNeuwied-white);
+$primary: mat.get-color-from-palette($BaumdienstNeuwied-primary);
+$accent: mat.get-color-from-palette($BaumdienstNeuwied-accent, 500);
+$warn: mat.get-color-from-palette($BaumdienstNeuwied-white);
 
 /* Global Color Vars */
 $color-background-light: #fff;

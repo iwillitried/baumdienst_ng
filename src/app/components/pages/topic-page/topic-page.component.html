@@ -1,1 +1,33 @@
-<app-content [contentType]="type.text_only"></app-content>
+<app-content-header [subtitle]="topic.subtitle.join('\n')"
+                    [title]="topic.title">
+</app-content-header>
+
+<div class="content-container">
+  <section *ngFor="let text of topic.text, let i = index">
+    <div class="image-frame" style="height: {{imageSize/(topic.text.length+1)}}px">
+      <img src="{{topic.imagePaths[0] || ''}}" style="top: {{-i * (imageSize/(topic.text.length+1))}}px"/>
+    </div>
+
+
+    <div *ngIf="text.length > 1" class="text-wrapper with-heading">
+      <h3>{{text[0]}}</h3>
+      <p *ngFor="let par of text.slice(1)">{{par}}</p>
+    </div>
+
+    <div *ngIf="text.length == 1" class="text-wrapper just-text">
+      <p>{{text}}</p>
+    </div>
+
+  </section>
+  <section>
+    <div class="image-frame" style="height: {{imageSize/(topic.text.length+1)}}px">
+      <img src="{{topic.imagePaths[0] || ''}}"
+           style="top: {{-topic.text.length * (imageSize/(topic.text.length+1))}}px"/>
+    </div>
+  </section>
+
+</div>
+
+<button (click)="backButtonPressed()" [matTooltip]="'button.back' | translate" mat-icon-button>
+  <mat-icon>arrow_back</mat-icon>
+</button>

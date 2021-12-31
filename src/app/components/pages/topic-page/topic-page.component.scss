@@ -1,3 +1,45 @@
-h1, p {
-  text-align: center;
+@import "/src/scss/styles";
+
+section {
+  .image-frame {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
 }
+
+.text-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+
+button[mat-icon-button] {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: $color-background-accent;
+  width: 100px;
+  height: 100px;
+}
+

@@ -1,12 +1,12 @@
 <div [ngClass]="{'inverted': invertedHeader}" class="content-container">
   <div class="header-buttons isFixed">
-    <button (click)="goToContact()" class="backdrop-blur" mat-button routerLink="/">Kontakt</button>
+    <!--    <button [fragment]="'contact_form'" class="backdrop-blur" mat-button routerLink="/">Kontakt</button>-->
+    <button class="backdrop-blur" mat-button>Kontakt</button>
     <button class="backdrop-blur" mat-button routerLink="/werte">Werte</button>
     <button class="backdrop-blur" mat-button>Impressum</button>
   </div>
 
   <img [src]="logoUrl" class="backdrop-blur" routerLink="/">
-
 </div>
 
 
