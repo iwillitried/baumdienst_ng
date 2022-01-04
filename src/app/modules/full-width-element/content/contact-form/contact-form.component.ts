@@ -13,6 +13,7 @@ export class ContactFormComponent implements OnInit {
 
   constructor(private messageService: MessageService,
               private builder: FormBuilder) {
+    this.FormData = this.builder.group({});
   }
 
   ngOnInit(): void {
@@ -30,6 +31,6 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit(value: any): void {
-    
+
   }
 }
