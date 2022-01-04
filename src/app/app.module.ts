@@ -16,6 +16,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     FullWidthElementModule,
     DirectivesModule,

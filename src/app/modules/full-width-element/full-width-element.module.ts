@@ -17,6 +17,7 @@ import {DirectivesModule} from '../directives/directives.module';
 import {RouterModule} from '@angular/router';
 import {ContentHeaderComponent} from './header/content-header/content-header/content-header.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import {TranslateModule} from '@ngx-translate/core';
     MatTooltipModule,
     RouterModule,
     TranslateModule,
+    ReactiveFormsModule,
 
   ],
   exports: [

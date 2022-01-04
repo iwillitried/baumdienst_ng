@@ -1,41 +1,51 @@
-<div id="contact_form" class="component-wrapper" (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')">
+<div (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')" class="component-wrapper"
+     id="contact_form">
   <div class="banner">
     <h1>Kontakt</h1>
     <h4>Erzählen Sie von Ihrem Anliegen.<br>
       Wir nehmen gerne den Kontakt auf.</h4>
   </div>
 
-  <div class="form-container flex-container">
-    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
-      <mat-label color="warn">E-Mail</mat-label>
-      <input matInput placeholder="peter.pan@gmail.com" color="warn">
-      <mat-icon matSuffix color="warn">mail_outline</mat-icon>
+  <form (ngSubmit)="onSubmit(FormData.value)" [formGroup]="FormData" class="form-container flex-container">
+    <mat-form-field appearance="fill" class="form-field-regular" color="warn">
+      <mat-label color="warn" for="email">E-Mail</mat-label>
+      <input color="warn" matInput name="email" placeholder="peter.pan@gmail.com">
+      <mat-icon color="warn" matSuffix>mail_outline</mat-icon>
     </mat-form-field>
-    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
-      <mat-label color="warn">Name</mat-label>
-      <input matInput placeholder="Peter Pan" color="warn">
-      <mat-icon matSuffix color="warn">person_outline</mat-icon>
+    <mat-form-field appearance="fill" class="form-field-regular" color="warn">
+      <mat-label color="warn" for="name">Name</mat-label>
+      <input color="warn" matInput name="name" placeholder="Peter Pan">
+      <mat-icon color="warn" matSuffix>person_outline</mat-icon>
     </mat-form-field>
-    <mat-form-field appearance="fill" color="warn" class="form-field-regular">
-      <mat-label color="warn">Telefonnummer</mat-label>
-      <input matInput placeholder="01234 567 8901" color="warn">
-      <mat-icon matSuffix color="warn">phone_outline</mat-icon>
+    <mat-form-field appearance="fill" class="form-field-regular" color="warn">
+      <mat-label color="warn" for="tel">Telefonnummer</mat-label>
+      <input color="warn" matInput name="tel" placeholder="01234 567 8901">
+      <mat-icon color="warn" matSuffix>phone_outline</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="fill" color="warn">
-      <mat-label color="warn">Nachricht</mat-label>
-      <textarea class="form-field-large" matInput color="warn"></textarea>
+      <mat-label color="warn" for="message">Nachricht</mat-label>
+      <textarea class="form-field-large" color="warn" matInput name="message"></textarea>
     </mat-form-field>
-    <button mat-flat-button color="warn">Anfrage senden</button>
+    <button color="warn" mat-flat-button type="submit">Anfrage senden</button>
 
-  </div>
+  </form>
 
   <div class="contactInfo-container">
-    <p>Telefon: <mark>02634 940490</mark></p>
-    <p>Mail: <mark>info@baumdienst-neuwied.de</mark></p>
-    <p>Adresse: <mark>Rengsdorfer Straße 43, 56581 Melsbach</mark></p>
-    <p>Bank: <mark>Sparkasse Neuwied<br>DE04 5745 0120 0030 5041 04</mark></p>
+    <p>Telefon:
+      <mark>02634 940490</mark>
+    </p>
+    <p>Mail:
+      <mark>info@baumdienst-neuwied.de</mark>
+    </p>
+    <p>Adresse:
+      <mark>Rengsdorfer Straße 43, 56581 Melsbach</mark>
+    </p>
+    <p>Bank:
+      <mark>Sparkasse Neuwied<br>DE04 5745 0120 0030 5041 04</mark>
+    </p>
     <div class="social-buttons-container">
-      <a class="facebook-icon" href="https://de-de.facebook.com/Baumdienst-Neuwied-178810535639905/" title="Zur Facebook Seite"></a>
+      <a class="facebook-icon" href="https://de-de.facebook.com/Baumdienst-Neuwied-178810535639905/"
+         title="Zur Facebook Seite"></a>
       <a class="instagram-icon" href="https://www.instagram.com/baumdienst_neuwied/" title="Zur Instagram Seite"></a>
       <a class="mail-icon" href="mailto:info@baumdienst-neuwied.de" title="E-Mail senden"></a>
     </div>
