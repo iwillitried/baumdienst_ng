@@ -30,7 +30,7 @@ jobs:
         run: npm install
       - name: Build project
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: ng build --prod
+        run: cd /home/runner/work/baumdienst_ng/baumdienst_ng/ && ng build --prod
         env:
           SITE_URL: ${{ steps.project.outputs.site-url }}
           CI: true
