@@ -20,11 +20,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: 'recursive'
-      - name: Setup Node.js 6.x
+      - name: Install Node 12.8
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/setup-node@v1
         with:
-          node-version: 6.x
+          node-version: 12.8
       - name: Prepare project environment
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: npm install
