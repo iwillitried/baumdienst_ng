@@ -30,7 +30,7 @@ jobs:
         run: npm install
       - name: Build project
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: pwd && ls && ng v
+        run: pwd && ls && npm run build
         env:
           SITE_URL: ${{ steps.project.outputs.site-url }}
           CI: true
