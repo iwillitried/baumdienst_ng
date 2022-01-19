@@ -18,6 +18,7 @@ import {RouterModule} from '@angular/router';
 import {ContentHeaderComponent} from './header/content-header/content-header/content-header.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     RouterModule,
     TranslateModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
 
   ],
   exports: [

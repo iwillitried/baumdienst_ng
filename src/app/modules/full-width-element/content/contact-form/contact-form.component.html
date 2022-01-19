@@ -1,32 +1,52 @@
-<div (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')" class="component-wrapper"
-     id="contact_form">
+<div (mouseenter)="setHeaderTo('inverted')" (mouseleave)="setHeaderTo('default')"
+     [ngClass]="{'showSuccess': emailState === EmailState.done}"
+     class="component-wrapper" id="contact_form">
   <div class="banner">
     <h1>Kontakt</h1>
     <h4>Erzählen Sie von Ihrem Anliegen.<br>
       Wir nehmen gerne den Kontakt auf.</h4>
   </div>
 
-  <form (ngSubmit)="onSubmit(FormData.value)" [formGroup]="FormData" class="form-container flex-container">
+  <form (keyup.enter)="FormData.valid && onSubmit(FormData.value)"
+        (ngSubmit)="onSubmit(FormData.value)"
+        [formGroup]="FormData"
+        class="form-container flex-container">
+
     <mat-form-field appearance="fill" class="form-field-regular" color="warn">
       <mat-label color="warn" for="email">E-Mail</mat-label>
-      <input color="warn" matInput name="email" placeholder="peter.pan@gmail.com">
+      <input color="warn" formControlName="email" matInput name="email" placeholder="peter.pan@gmail.com" required>
       <mat-icon color="warn" matSuffix>mail_outline</mat-icon>
+      <mat-error *ngIf="FormData.invalid">{{'Ungültige E-Mail Adresse'}}</mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill" class="form-field-regular" color="warn">
       <mat-label color="warn" for="name">Name</mat-label>
-      <input color="warn" matInput name="name" placeholder="Peter Pan">
+      <input color="warn" formControlName="name" matInput name="name" placeholder="Peter Pan" required>
       <mat-icon color="warn" matSuffix>person_outline</mat-icon>
+      <mat-error *ngIf="FormData.invalid">{{'Pflichfeld'}}</mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill" class="form-field-regular" color="warn">
       <mat-label color="warn" for="tel">Telefonnummer</mat-label>
-      <input color="warn" matInput name="tel" placeholder="01234 567 8901">
+      <input color="warn" formControlName="tel" matInput name="tel" placeholder="01234 567 8901">
       <mat-icon color="warn" matSuffix>phone_outline</mat-icon>
     </mat-form-field>
+
     <mat-form-field appearance="fill" color="warn">
       <mat-label color="warn" for="message">Nachricht</mat-label>
-      <textarea class="form-field-large" color="warn" matInput name="message"></textarea>
+      <textarea class="form-field-large" color="warn" formControlName="message" matInput name="message"></textarea>
+      <mat-error *ngIf="FormData.invalid">{{'Pflichtfeld'}}</mat-error>
     </mat-form-field>
-    <button color="warn" mat-flat-button type="submit">Anfrage senden</button>
+
+    <button [disabled]="!FormData.valid && emailState === EmailState.ready"
+            [ngClass]="{'loading': emailState === EmailState.sending, 'done': emailState === EmailState.done}"
+            color="warn"
+            mat-flat-button type="submit">
+      <p *ngIf="emailState === EmailState.ready">Anfrage senden</p>
+      <p *ngIf="emailState === EmailState.error">Fehler beim senden</p>
+      <p *ngIf="emailState === EmailState.done"><b>Fertig!</b> Vielen Dank, wir melden uns</p>
+      <mat-spinner *ngIf="emailState === EmailState.sending" color="accent" diameter="50"></mat-spinner>
+    </button>
 
   </form>
 

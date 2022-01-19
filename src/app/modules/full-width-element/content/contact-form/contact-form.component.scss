@@ -3,6 +3,27 @@
 .component-wrapper {
   background-color: $color-background-form;
 }
+
+.showSuccess {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: radial-gradient(circle, rgba(136, 172, 53, 1) 0%, rgba(136, 172, 53, 1) 36%, rgba(136, 172, 53, 0) 70%, rgba(136, 172, 53, 0) 100%);
+
+    transform: scale(0);
+    opacity: .5;
+    animation: showSuccess 4s 1;
+
+  }
+}
+
 .banner {
   padding-top: 90px;
   padding-bottom: 50px;
@@ -38,16 +59,41 @@
 
   .form-field-regular {
     height: 75px;
+    margin-bottom: 4px;
   }
+
   .form-field-large {
     height: 150px;
+    margin-bottom: 4px;
+  }
+
+  mat-error.mat-error {
+    color: $color-font-warning;
   }
 
   button {
     color: $color-accent-primary;
     height: 70px;
+    margin: 0 auto;
+    transition: width ease-in-out .5s;
+    width: 100%;
+    padding: 0;
+
+    p, mat-spinner {
+      margin: 0 auto;
+      animation: fadeIn .6s 1 forwards;
+      opacity: 0;
+    }
   }
 
+  button.loading {
+    width: 70px;
+  }
+
+  button.done, button.loading {
+    pointer-events: none;
+  }
+  
   .mat-form-field.mat-warn .mat-input-element {
     color: $color-font-inverted !important;
   }
@@ -62,6 +108,7 @@
 
   p {
     color: rgba($color-font-inverted, 0.5);
+
     mark {
       color: $color-font-inverted;
       background-color: transparent;
@@ -79,9 +126,11 @@
         margin-left: 0;
         background-image: url("/assets/icons/facebook.svg");
       }
+
       &.instagram-icon {
         background-image: url("/assets/icons/instagram.svg");
       }
+
       &.mail-icon {
         background-image: url("/assets/icons/email.svg");
       }
@@ -90,6 +139,27 @@
 
   }
 
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes showSuccess {
+  0% {
+    transform: scale(0);
+  }
+
+  30% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 @media #{$s-screen} {
@@ -101,5 +171,3 @@
     max-width: 550px;
   }
 }
-
-

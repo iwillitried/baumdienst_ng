@@ -19,6 +19,7 @@ $color-font-inverted: #fff;
 $color-font-secondary: #8b8266;
 $color-font-action-button: #804E49;
 $color-font-offwhite: #E5E5E5;
+$color-font-warning: #f44336;
 
 
 /* Corner Radius */
@@ -59,26 +60,50 @@ $xl-screen: "(min-width: 1200px)";
 /* Max content width */
 $max-content-wrapper-width: 1200px;
 
-body{
+body {
 }
 
-h1 { font-size: $font-size-h1; }
-h1.extraLarge { font-size: $font-size-extraLarge, le }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; letter-spacing: $letter-spacing-16; font-weight: normal; }
-h4 { font-size: $font-size-h4; font-weight: bold; }
+h1 {
+  font-size: $font-size-h1;
+}
 
-button { font-size: $font-size-regular }
+h1.extraLarge {
+  font-size: $font-size-extraLarge, le
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  letter-spacing: $letter-spacing-16;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-weight: bold;
+}
+
+button {
+  font-size: $font-size-regular
+}
+
 button.bigShadow {
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover {
     transform: scale(1.15);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 }
 
-img {object-fit: cover;}
+img {
+  object-fit: cover;
+}
+
 * {
-    font-family: $font-family;
-    scroll-behavior: smooth;
+  font-family: $font-family;
+  scroll-behavior: smooth;
 }
